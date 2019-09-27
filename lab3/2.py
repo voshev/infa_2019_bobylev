@@ -1,9 +1,25 @@
 from graph import*
-
+"""Рисует темно-синий прямоугольник"""
+brushColor(68,35,223)
+penSize(400)
+penColor(68,35,223)
+line(0,350,1000,350)
+"""Рисует светло-синий прямоугольник"""
+brushColor(161,245,255)
+penSize(420)
+penColor(161,245,255)
+line(0,0,1000,0)
+"""Рисует желтый прямоугольник"""
+brushColor(238,246,12)
+penSize(300)
+penColor(238,246,12)
+line(0,450,1000,450)
+"""Рисует солнце"""
+penSize(1)
 brushColor('yellow')
 penColor('white')
 circle(400,60,50)
-
+"""Рисует облака"""
 brushColor('white')
 penColor('black')
 circle(100,50,20)
@@ -13,10 +29,55 @@ circle(110,65,20)
 circle(145,65,20)
 circle(160,50,20)
 circle(170,65,20)
-
-brushColor(0,0,50)
-penSize(300)
-penColor(0,0,50)
-line(0,500,1000,500)
-
+"""Рисует шляпку зонтика"""
+brushColor(244,81,81)
+penColor(244,81,81)
+polygon([(10,280),(60,240),(110,280),(10,280)])
+"""Рисует линии на шляпке зонтика"""
+brushColor(181,60,60)
+penColor(181,60,60)
+line(60,240,70,280)
+line(60,240,85,280)
+line(60,240,100,280)
+line(60,240,45,280)
+line(60,240,30,280)
+line(60,240,15,280)
+"""Рисует ножку зонтика"""
+penSize(6)
+brushColor(227,130,25)
+penColor(227,130,25)
+line(60,240,60,400)
+"""Рисует четверть окружности лодки"""
+brushColor(186,80,5)
+penColor('black')
+penSize(1)
+circle(250,230,20)
+brushColor(68,35,223)
+penColor(68,35,223)
+penSize(20)
+line(0,221,1000,221)
+"""Рисует прямоугольник лодки"""
+brushColor(186,80,5)
+penSize(1)
+penColor('black')
+rectangle(250,230,400,250)
+"""Рисует треугольник лодки"""
+penColor('black')
+polygon([(400,230),(450,230),(400,250),(400,230)])
+"""Рисует окружность на лодке"""
+brushColor('white')
+penColor('black')
+penSize(3)
+circle(410,238,5)
+"""Рисует мачту"""
+brushColor('black')
+penColor('black')
+penSize(4)
+line(290,230,290,130)
+"""Рисует парус"""
+brushColor(222,213,153)
+penColor('black')
+penSize(1)
+polygon([(290,130),(350,180),(310,180),(290,130)])
+polygon([(290,230),(350,180),(310,180),(290,230)])
 run()
