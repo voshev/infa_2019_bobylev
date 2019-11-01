@@ -44,7 +44,7 @@ class	Ball():
 			return	True
 		else:
 			return	False
-class	Gun():
+class Gun():
 	def	__init__(self):
 		self.f2_power=10
 		self.f2_on=0
@@ -55,7 +55,7 @@ class	Gun():
 	def	fire2_end(self,event):
 		global	balls,bullet
 		bullet+=1
-		new_ball=ball()
+		new_ball=Ball()
 		new_ball.r+=5
 		self.an=math.atan((event.y-new_ball.y)/(event.x-new_ball.x))
 		new_ball.vx=self.f2_power*math.cos(self.an)
@@ -78,7 +78,7 @@ class	Gun():
 			canv.itemconfig(self.id,fill='orange')
 		else:
 			canv.itemconfig(self.id,fill='black')
-class	Target():
+class Target():
 	def	__init__(self):
 		self.points=0
 		self.id=canv.create_oval(0,0,0,0)
@@ -96,11 +96,11 @@ class	Target():
 		canv.coords(self.id,-10,-10,-10,-10)
 		self.points+=points
 		canv.itemconfig(self.id_points,text=self.points)
-t1=target()
+t1 = Target()
 screen1=canv.create_text(400,300,text='',font='28')
-g1=gun()
-bullet=0
-balls=[]
+g1 = Gun()
+bullet = 0
+balls = []
 def	new_game(event=''):
 	global	gun,t1,screen1,balls,bullet
 	t1.new_target()
